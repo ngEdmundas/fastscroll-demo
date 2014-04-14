@@ -1,0 +1,16 @@
+.scrollable {
+    border: 5px solid red;
+    width: 600px;
+    height: 400px;
+    overflow: scroll;
+}
+
+.item {
+    height: 40px;
+    overflow: hidden;
+    line-height: 40px;
+}
+
+.item.active {
+    background: #eee;
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>fastscroll demo</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="angular.js"></script>
+        <script src="iscroll-native.js"></script>
+        <script src="fastscroll.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="app">
+        <h1>Scrollable div:</h1>
+        <p><a href="#" ng-click="updateVisibleUsers(); reverse = !reverse">Order by name {{reverse ? 'reverse' : ''}}</a></p>
+        <p>
+            Filter:
+            <input type="text" ng-model="userFilter" ng-change="updateVisibleUsers()">
+        </p>
+        <div class="scrollable" fastscroll collection="user in visibleUsers" item-height="40">
+            <div class="item" ng-click="user.isSelected = !user.isSelected" ng-class="{'active':user.isSelected}">
+                {{ user.name }} ({{user.street}} {{user.town}})
+            </div>
+        </div>
+    </body>
+</html>

@@ -13,3 +13,5 @@ A whole bunch of performance optimizations was done to make this work that smoot
  - only render in requestAnimationFrame
 
 However, there's iScroll-native for iPads to work in it - this should be decoupled.
+
+Inspired by [baredom](https://github.com/doctape/baredom)
